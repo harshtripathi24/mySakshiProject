@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Form</title>
+
+    <!-- add icon link -->
+    <link rel="icon" href="./Image/rbg.png" sizes="16x16" type="image/x-icon" />
+    <link rel="stylesheet" href="./CSS/google.fb_button.css" />
+    <link rel="stylesheet" href="./CSS/login+signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="div1">
+      <form id="forgetPassForm" action="" onsubmit="forgetPass()">
+        <img
+          src="./Image/Logo.png"
+          alt="Writeasy Logo"
+          title="Writeasy"
+          height="200px"
+          width="200px"
+        />
+        <br />
+
+        <small>
+          <span id="error" style="color: red"></span>
+        </small>
+        <br />
+
+        <div class="container">
+          <input
+            type="email"
+            title="Enter your email"
+            placeholder="Email"
+            name="Email"
+            id="email"
+            required
+          />
+          <br />
+          <button type="submit" title="Sign-up" class="cont" id="btnSubmit">
+            Send Email</button
+          ><br />
+
+          <br />
+        </div>
+      </form>
+    </div>
+
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="../JS/firebase.js"></script>
+    <script src="./JS/forgetPass.js"></script>
+  </body>
+</html>

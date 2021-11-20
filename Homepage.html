@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homepage</title>
+
+    <link rel="icon" href="./Image/rbg.png" sizes="16x16" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./CSS/Homepage.css" type="text/css" rel="stylesheet" />
+    <link href="./CSS/slidernew.css" type="text/css" rel="stylesheet" />
+    <link href="./CSS/Calender.css" type="text/css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  </head>
+  <body>
+    <div class="spacer"></div>
+    <div class="nav">
+      <img
+        src="./Image/rbg.png"
+        style="
+          height: 50px;
+          width: 50px;
+          float: left;
+          padding-right: 5px;
+          padding-left: 2px;
+        "
+        title="Writeasy"
+      />
+      <div id="div1">
+        <div class="search">
+          <i class="fas fa-search" id="srch" title="Search"></i>
+          <input type="text" class="searchTerm" placeholder="Search" />
+        </div>
+      </div>
+      <div id="div2">
+        <div id="headings">
+          <span class="a"
+            ><i class="far fa-sticky-note" class="hd" title="Notes"></i>&nbsp;
+            <a href="Homepage.html" title="Notes">Notes</a></span
+          >
+          <span class="a"
+            ><i class="far fa-bell" class="hd" title="Remainder"></i>&nbsp;
+            <a href="#" title="Remainder">Remainders</a></span
+          >
+          <span class="a"
+            ><i class="fas fa-list-ul" class="hd" title="To-do list"></i>&nbsp;
+            <a href="#" title="To-do list" class="hd">To-do List</a></span
+          >
+          <span class="a">
+            <i class="far fa-star" class="hd" title="Favourites"></i>&nbsp;
+            <a href="#" title="Favourites">Favourites</a></span
+          >
+        </div>
+      </div>
+      <div id="div3">
+        <span class="cal"
+          ><i
+            class="far fa-calendar-alt fa-2x"
+            class="fun"
+            title="Calender"
+            style="margin-top: 12px; padding-left: 30px"
+          ></i></span
+        >&nbsp;
+        <span id="view"
+          ><i
+            class="fas fa-bars fa-2x"
+            class="fun"
+            title="List View"
+            style="margin-top: 12px; padding-left: 30px"
+          ></i></span
+        >&nbsp;
+        <span id="sort"
+          ><i
+            class="fas fa-sort fa-2x"
+            class="fun"
+            title="Sort"
+            style="margin-top: 12px; padding-left: 30px"
+          ></i></span
+        >&nbsp;
+        <span class="float"
+          ><i class="fas fa-user fa-3x" class="user" title="User's Profile"></i
+        ></span>
+      </div>
+    </div>
+
+    <button class="add-button" onmousedown="addNote()">+</button>
+
+    <div class="slider">
+      <div class="contents">
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <a href="#">My Account</a>
+        <a href="#">Theme</a>
+        <a href="#">Bin</a>
+        <a href="#">About</a>
+        <a href="#">Help & Support</a>
+        <a href="#"> Send Feedback </a>
+        <a href="" onclick="logout()" >Sign out</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+      </div>
+    </div>
+    <script src="./JS/Homepage.js"></script>
+    <script src="./JS/Calender.js"></script>
+    <script src="./JS/Cal_slider.js"></script>
+
+    <!-- Firebase SDKs -->
+<!--   // Import the functions you need from the SDKs you need -->
+       <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+     
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="./JS/firebase.js"></script>
+    <script src="./JS/HomePageM.js"></script>
+  </body>
+</html>

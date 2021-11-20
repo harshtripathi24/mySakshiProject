@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+
+    <link rel="icon" href="rbg.png" sizes="16x16" type="image/x-icon" />
+    <link rel="stylesheet" href="../CSS/google.fb_button.css" />
+    <link rel="stylesheet" href="../CSS/login+signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="div1">
+      <form id="loginForm" onsubmit="login()" action="">
+        <img
+          src="../Image/Logo.png"
+          alt="Writeasy Logo"
+          title="Writeasy"
+          style="height: 200px; width: 200px"
+        />
+        <br />
+        <small>
+          <span id="error" style="color: red"></span>
+        </small>
+        <input
+          type="email"
+          title="Enter your email"
+          placeholder="Email"
+          name="email"
+          id="email"
+          EnableDisable(this)
+          required
+        />
+        <br />
+        <div class="pswrd">
+          <input
+            type="password"
+            for="Email"
+            title="Enter your password"
+            placeholder="Password"
+            name="Password"
+            id="password"
+            required
+          />
+        </div>
+        <button type="submit" class="cont">Continue</button><br />
+        <br />
+        <a href="./ForgetPass.html">Forget Password</a>
+        <br />
+        <h4>or</h4>
+        <br />
+
+        <button
+          onclick="googleLogin()"
+          class="loginBtn loginBtn--google"
+          title="Continue with Google"
+        >
+          Login with Google
+        </button>
+        <button
+          class="loginBtn loginBtn--facebook"
+          title="Continue with Facebook"
+        >
+          Login with Facebook</button
+        ><br /><br />
+        <br />
+
+        <div style="font-size: small; font-family: 'Gluten', cursive">
+          Don't have account?<a
+            href="./Signup.html"
+            style="font-size: small; font-family: 'Gluten', cursive"
+            title="click to signup"
+            >Create one</a
+          >
+        </div>
+      </form>
+    </div>
+    <script src="password.js"></script>
+    <script>
+      let d = document,
+        [inputs, knapp] = [
+          d.querySelectorAll('[type="text"], [type="password"]'),
+          d.querySelector(".cont"),
+        ];
+      knapp.disabled = true;
+
+      for (i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener("input", () => {
+          let values = [];
+          inputs.forEach((v) => values.push(v.value));
+          knapp.disabled = values.includes("");
+        });
+      }
+
+      const togglePassword = document.querySelector("#eyes");
+      const password = document.querySelector("#lpsw");
+
+      togglePassword.addEventListener("click", function (e) {
+        // toggle the type attribute
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the eye slash icon
+        this.classList.toggle("fa-eye-slash");
+      });
+    </script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="../JS/firebase.js"></script>
+    <script src="../JS/Login.js"></script>
+  </body>
+</html>
